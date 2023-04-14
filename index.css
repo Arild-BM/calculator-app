@@ -1,0 +1,250 @@
+/* Dark theme */
+:root,
+:root.dark {
+--color-body: hsl(222, 26%, 31%);
+--color-toggle-background: hsl(223, 31%, 20%);
+--color-background-display: hsl(224, 36%, 15%);
+--color-key-reset-background: hsl(225, 21%, 49%);
+--color-key-reset-active: hsl(224, 51%, 76%);
+--color-key-reset-shadow: hsl(224, 28%, 35%);
+--color-key-main-background: hsl(30, 25%, 89%);
+--color-key-main-active: hsl(0, 0%, 100%);
+--color-key-main-shadow: hsl(28, 16%, 65%);
+--color-key-equal-background: hsl(6, 63%, 50%);
+--color-key-equal-active: hsl(7, 93%, 67%);
+--color-key-equal-shadow: hsl(6, 70%, 34%);
+--color-text-main-key: hsl(221, 14%, 31%);
+--color-text-reset-key: hsl(0, 0%, 100%);
+--color-text-equal-key: hsl(0, 0%, 100%);
+--color-text-display: hsl(0, 0%, 100%);
+--color-dot-1: hsl(7, 93%, 67%);
+--color-dot-2: hsl(223, 31%, 20%);
+--color-dot-3: hsl(223, 31%, 20%);
+}
+
+/* Light theme */
+:root.light {
+--color-body: hsl(0, 0%, 90%);
+--color-toggle-background: hsl(0, 5%, 81%);
+--color-background-display: hsl(0, 0%, 93%);
+--color-key-reset-background: hsl(185, 42%, 37%);
+--color-key-reset-active: hsl(185, 41%, 56%);
+--color-key-reset-shadow: hsl(185, 58%, 25%);
+--color-key-main-background: hsl(45, 7%, 89%);
+--color-key-main-active: hsl(0, 0%, 100%);
+--color-key-main-shadow: hsl(35, 11%, 61%);
+--color-key-equal-background: hsl(25, 98%, 40%);
+--color-key-equal-active: hsl(25, 100%, 61%);
+--color-key-equal-shadow: hsl(25, 99%, 27%);
+--color-text-main-key: hsl(60, 10%, 19%);
+--color-text-reset-key: hsl(0, 0%, 100%);
+--color-text-equal-key: hsl(0, 0%, 100%);
+--color-text-display: hsl(60, 10%, 19%);
+--color-dot-1: hsl(0, 5%, 81%);
+--color-dot-2: hsl(25, 98%, 40%);
+--color-dot-3: hsl(0, 5%, 81%);
+}
+
+/* Pink theme */
+:root.pink {
+--color-body: hsl(268, 75%, 9%);
+--color-toggle-background: hsl(268, 71%, 12%);
+--color-background-display: hsl(224, 36%, 15%);
+--color-key-reset-background: hsl(281, 89%, 26%);
+--color-key-reset-active: hsl(280, 56%, 44%);
+--color-key-reset-shadow: hsl(285, 91%, 52%);
+--color-key-main-background: hsl(268, 47%, 21%);
+--color-key-main-active: hsl(268, 54%, 44%);
+--color-key-main-shadow: hsl(290, 70%, 36%);
+--color-key-equal-background: hsl(176, 100%, 44%);
+--color-key-equal-active: hsl(177, 100%, 79%);
+--color-key-equal-shadow: hsl(177, 92%, 70%);
+--color-text-main-key: hsl(52, 100%, 62%);
+--color-text-reset-key: hsl(0, 0%, 100%);
+--color-text-equal-key: hsl(198, 20%, 13%);
+--color-text-display: hsl(52, 100%, 62%);
+--color-dot-1: hsl(268, 71%, 12%);
+--color-dot-2:hsl(268, 71%, 12%);
+--color-dot-3: hsl(176, 100%, 44%);
+}
+
+body {
+    background-color: var(--color-body);
+    color: var(--color-text-display);
+    font-family: 'League Spartan', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15px;
+}
+
+/* Theme numbers and dots */
+.numbers, .dots {
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Theme dots background*/
+.dots {
+    background-color: var(--color-toggle-background);
+    padding: 3px;
+    border-radius: 20px;
+}
+
+/* Make the dots a circle */
+.dots h5 {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Colors of the three dots */
+.dots h5.dark {
+    border: 6px solid var(--color-dot-1);
+}
+
+.dots h5.light {
+    border: 6px solid var(--color-dot-2);
+}
+
+.dots h5.pink {
+    border: 6px solid var(--color-dot-3);
+}
+
+/* Set numbers above the dots */
+.toggler {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+/* Spacing of theme line */
+.theme {
+    display: flex;
+    justify-content: space-between;
+    width: 115px;
+    align-items: center;
+}
+
+/* Dots */
+h5 {
+    margin: 0;
+}
+
+/* Numbers above dots and "THEME" */
+h6 {
+    margin: 0 7px 0 0;
+}
+
+/* Main container with header, display and keys */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    outline: 5px solid var(--color-key-main-shadow);
+    border-radius: 10px;
+}
+
+/* All keys */
+.main-keys, .item05,
+.item18, .item19 {
+    cursor: pointer;
+    height: 10px;
+    border-radius: 10px;
+}
+
+/* Display */
+.item01 { 
+    display: flex;
+    height: 50px;
+    background-color: var(--color-background-display);
+    color: var(--color-text-display);
+    border-radius: 5px;
+    margin: 0 15px 15px;
+    padding-right: 15px;
+    justify-content: right;
+    align-items: center;
+}
+
+.item02 { grid-area: seven; }
+.item03 { grid-area: eight; }
+.item04 { grid-area: nine; }
+.item05 { grid-area: del; }
+.item06 { grid-area: four; }
+.item07 { grid-area: five; }
+.item08 { grid-area: six; }
+.item09 { grid-area: plus; }
+.item10 { grid-area: one; }
+.item11 { grid-area: two; }
+.item12 { grid-area: three; }
+.item13 { grid-area: minus; }
+.item14 { grid-area: stop; }
+.item15 { grid-area: null; }
+.item16 { grid-area: slash; }
+.item17 { grid-area: time; }
+.item18 { grid-area: reset; }
+.item19 { 
+    grid-area: equal;
+    background-color: var(--color-key-equal-background);
+    color: var(--color-text-equal-key);
+    text-align: center;
+    border-bottom: 3px solid var(--color-key-equal-shadow);
+}
+
+.item19:hover {
+    background-color: var(--color-key-equal-active);
+}
+
+/* DEL and RESET key */
+.item05, .item18 { 
+    background-color: var(--color-key-reset-background);
+    color: var(--color-text-reset-key);
+    text-align: center;
+    border-bottom: 3px solid var(--color-key-reset-shadow);
+}
+
+.item05:hover, 
+.item18:hover {
+    background-color: var(--color-key-reset-active);
+}
+
+/* All keys with the same color (not DEL, RESET and "=" )*/
+.main-keys {
+    background-color: var(--color-key-main-background);
+    color: var(--color-text-main-key);
+    text-align: center;
+    border-bottom: 3px solid var(--color-key-main-shadow);
+}
+
+.main-keys:hover {
+    background-color: var(--color-key-main-active);
+}
+
+/* Grid for all the keys */
+.grid-container {
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px;
+    grid-template-areas:
+    'seven eight nine del'
+    'four five six plus'
+    'one two three minus'
+    'stop null slash time'
+    'reset reset equal equal';
+    gap: 15px;
+    padding: 15px;
+    background-color: var(--color-toggle-background);
+    border-radius: 5px;
+}
+
+/* Padding for each key */
+.grid-container > div {
+  padding: 10px 0 15px 0;
+}
