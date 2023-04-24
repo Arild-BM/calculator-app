@@ -153,6 +153,13 @@ h6 {
     border-radius: 10px;
 }
 
+@media (max-width: 500px) {
+    .flex-container {
+        outline: none;
+        border-radius: unset;
+    }
+}
+
 /* All keys */
 .main-keys, .item05,
 .item18, .item19 {
