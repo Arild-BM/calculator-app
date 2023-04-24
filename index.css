@@ -156,7 +156,6 @@ h6 {
 @media (max-width: 500px) {
     .flex-container {
         outline: none;
-        border-radius: unset;
     }
 }
 
